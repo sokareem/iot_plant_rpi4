@@ -11,8 +11,9 @@ from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNOperationType, PNStatusCategory
 
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = "sub-c-a667485c-757f-11e8-9f59-fec9626a7085"
-pnconfig.publish_key = "pub-c-cb2e18e3-a8b0-486a-bf82-2d9e9f670b7e"
+pnconfig.subscribe_key = "sub-c-7da197b0-a787-11ea-ae1a-36d49400aaff"
+pnconfig.publish_key = "pub-c-12ed66b1-705b-4eb4-aef6-4fe9dcf7b245"
+pnconfig.secret_key = "sec-c-ZGM5OWE4YmMtYzdlOC00MzljLTkxYmQtOTUzZmMyZTM4NmI2"
 pnconfig.ssl = False
  
 pubnub = PubNub(pnconfig)
