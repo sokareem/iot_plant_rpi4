@@ -65,11 +65,10 @@ class MySubscribeCallback(SubscribeCallback):
             pass # handle incoming prescence data
 
         def message(self, pubnub, message):
+            global flag
             if message.message == 'ON':
-                global flag
                 flag = 1
             elif message.message == 'OFF':
-                global flag
                 flag = 0
             elif message.message == 'WATER':
                 pump.off()
