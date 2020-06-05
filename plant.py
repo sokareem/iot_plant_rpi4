@@ -10,6 +10,13 @@ from pubnub.pubnub import PubNub
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNOperationType, PNStatusCategory
 
+pnconfig = PNConfiguration()
+pnconfig.subscribe_key = "sub-c-a667485c-757f-11e8-9f59-fec9626a7085"
+pnconfig.publish_key = "pub-c-cb2e18e3-a8b0-486a-bf82-2d9e9f670b7e"
+pnconfig.ssl = False
+ 
+pubnub = PubNub(pnconfig)
+
 #Pump is connected to GPIO4 as an LED
 pump = LED(4)
 
