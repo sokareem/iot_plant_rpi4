@@ -130,7 +130,7 @@ while True:
 		    pump.on()
 		    sleep(1)
 		else:
-		    pump.on()
+		    pump.off()
 
 		sleep(1)
 	elif flag == 0:
