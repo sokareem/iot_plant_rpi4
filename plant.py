@@ -113,14 +113,13 @@ while True:
 	if flag ==1:
 		# Try to grab a sensor reading.  Use the read_retry method which will retry up
 		# to 15 times to get a sensor reading (waiting 2 seconds between each retry).
-		humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-		DHT_Read = ('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
-		print(DHT_Read)
+		# humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+		# DHT_Read = ('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+		# print(DHT_Read)
 
-		dictionary = {"eon": {"Temperature": temperature, "Humidity": humidity}}
-		pubnub.publish().channel('ch2').message([DHT_Read]).async(publish_callback)
-		pubnub.publish().channel("eon-chart").message(dictionary).async(publish_callback)
-
+		# dictionary = {"eon": {"Temperature": temperature, "Humidity": humidity}}
+		# pubnub.publish().channel('ch2').message([DHT_Read]).async(publish_callback)
+		# pubnub.publish().channel("eon-chart").message(dictionary).async(publish_callback)
 		wet = get_status()
 		
 		if wet == True:
