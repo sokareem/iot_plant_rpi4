@@ -131,6 +131,8 @@ while True:
 		    sleep(1)
 		else:
 		    pump.off()
+            sleep(5)
+            pump.on()
 
 		sleep(1)
 	elif flag == 0:
