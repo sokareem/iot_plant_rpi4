@@ -120,21 +120,25 @@ while True:
 		# dictionary = {"eon": {"Temperature": temperature, "Humidity": humidity}}
 		# pubnub.publish().channel('ch2').message([DHT_Read]).async(publish_callback)
 		# pubnub.publish().channel("eon-chart").message(dictionary).async(publish_callback)
-		wet = get_status()
+		# wet = get_status()
 		
-		if wet == True:
-		    print("turning on")
-		    pump.off()
-		    sleep(5)
-		    print("pump turning off")
-		    pump.on()
-		    sleep(1)
-		else:
-		    pump.off()
-            sleep(5)
-            pump.on()
+		# if wet == True:
+		#     print("turning on")
+		#     pump.off()
+		#     sleep(5)
+		#     print("pump turning off")
+		#     pump.on()
+		#     sleep(1)
+		# else:
+        #     pump.on()
 
-		sleep(1)
+		# sleep(1)
+        print("turning on")
+        pump.off()
+        sleep(5)
+        print("pump turning off")
+        pump.on()
+        sleep(2)
 	elif flag == 0:
 		pump.on()
 		sleep(3)
