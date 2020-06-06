@@ -133,12 +133,17 @@ while True:
         #     pump.on()
 
 		# sleep(1)
-        print("turning on")
-        pump.off()
-        sleep(5)
-        print("pump turning off")
-        pump.on()
-        sleep(2)
+        try:
+            print("turning on")
+            pump.off()
+            sleep(30)
+            print("pump turning off")
+            pump.on()
+            sleep(2)
+            if ord('')
+        except KeyboardInterrupt:
+            pump.on()
+            break
 	elif flag == 0:
 		pump.on()
 		sleep(3)
